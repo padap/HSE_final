@@ -1,0 +1,22 @@
+Description.txt
+
+1 data/raw/{video_name.mp4} -  raw video
+
+2 data/segm/audio/{video_id}/"%04d.mp3"%segm_id - 2 sec np3 segment
+3 data/segm/video/{video_id}/"%04d"%segm_id/"%04d.jpeg"%(frame_id) - 2 sec jpeg pictures
+
+4 data/features/audio/{video_id}/"%04d.pickle" features from video
+5 data/features/video/{video_id}/"%04d.pickle" features from audio
+
+
+Plan:
+	Download videos, measure speed
+	Segment video, meause speed
+	Get features, measure speed
+	Optimize
+
+	Fit baseline model on those features
+	See at results
+
+
+
