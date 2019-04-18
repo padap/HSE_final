@@ -11,6 +11,7 @@ import shutil
 
 RESTTIME = 5
 DATAFOLDER = '../data/'
+NUM_OF_VIDEO = 100#None
 if not os.path.exists(DATAFOLDER):
     os.mkdir(DATAFOLDER)
     
@@ -31,6 +32,9 @@ def load_single_video(url):
         time.sleep(RESTTIME*30)
         
 url_list = [i[0] for i in sorted(get_urls().items(), key = lambda x:-x[1])]
+
+if NUM_OF_VIDEO is not None:
+    url_list = url_list[:NUM_OF_VIDEO]
 
 for url in tqdm(url_list):
     files_old = os.listdir('.')
