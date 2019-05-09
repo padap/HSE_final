@@ -22,7 +22,7 @@ SEGMENT_LENGTH = 2
 FPS_RATE = 30
 
 def parseId(fn):
-    return fn[-15:-4]
+    return fn.split('/')[-1][:11]
 
 def segment_single_video(fn):
     video = VideoFileClip(fn)
